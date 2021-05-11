@@ -1,10 +1,6 @@
 import React from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {View, Text, StyleSheet, Image, Button, FlatList, Platform} from 'react-native';
-import Colors from "../../constants/Colors";
-import * as cartActions from '../../store/actions/cart';
-import * as orderActions from '../../store/actions/orders';
-import CartItem from "../../components/shop/CartItem";
+import {useSelector} from "react-redux";
+import { StyleSheet, FlatList, Platform } from 'react-native';
 import {HeaderButtons, Item} from "react-navigation-header-buttons";
 import HeaderButton from "../../components/ui/HeaderButton";
 import OrderItem from "../../components/shop/OrderItem";

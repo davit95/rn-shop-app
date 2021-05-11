@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Ionicons } from "@expo/vector-icons";
-import { View, Text, Image, Button, StyleSheet, TouchableOpacity, TouchableNativeFeedback, Platform } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 import Colors from "../../constants/Colors";
 import CartItem from "./CartItem";
 import Card from "../ui/Card";

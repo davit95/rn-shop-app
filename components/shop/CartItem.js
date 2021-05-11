@@ -1,8 +1,6 @@
 import React from 'react';
 import { Ionicons } from "@expo/vector-icons";
-import { View, Text, Image, Button, StyleSheet, TouchableOpacity, TouchableNativeFeedback, Platform } from 'react-native';
-import Colors from "../../constants/Colors";
-
+import { View, Text, StyleSheet, TouchableOpacity, Platform } from 'react-native';
 
 const CartItem = props => {
   return (

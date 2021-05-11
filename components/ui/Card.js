@@ -1,8 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import {HeaderButton}  from "react-navigation-header-buttons";
-import { Ionicons } from "@expo/vector-icons";
-import Colors from "../../constants/Colors";
+import { View, StyleSheet } from "react-native";
 
 const Card = props => {
   return (
