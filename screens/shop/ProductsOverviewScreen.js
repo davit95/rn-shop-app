@@ -27,9 +27,9 @@ const ProductsOverviewScreen = props => {
   }, [dispatch, setIsLoading, setError]);
 
   useEffect(() => {
-    const willFocusSub = props.navigation.addListener('willFocus', loadProducts);
+    const unsubscribe = props.navigation.addListener('focus', loadProducts);
     return () => {
-      willFocusSub.remove();
+      unsubscribe();
     }
   }, [loadProducts])
 
@@ -41,13 +41,13 @@ const ProductsOverviewScreen = props => {
   }, [dispatch, loadProducts])
 
   const selectItemHandler = (id, title) => {
-    props.navigation.navigate({
-      routeName: 'ProductDetails',
-      params: {
+    props.navigation.navigate(
+      'ProductDetails',
+      {
         productId: id,
         productTitle: title
       }
-    })
+    )
   }
 
   if (error) {
@@ -96,14 +96,14 @@ const ProductsOverviewScreen = props => {
   )
 };
 
-ProductsOverviewScreen.navigationOptions = ({ navigation }) => ({
+export const screenOptions =  ({ navigation }) => ({
   title: 'Products Overview',
   headerRight: () => (
     <HeaderButtons HeaderButtonComponent={HeaderButton}>
       <Item
         title='cart'
         iconName={Platform.OS === 'android' ? 'md-cart' : 'ios-cart'}
-        onPress={() => navigation.navigate({ routeName: 'Cart' })}
+        onPress={() => navigation.navigate('Cart')}
       />
     </HeaderButtons>
   ),

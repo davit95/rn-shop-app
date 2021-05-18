@@ -53,7 +53,7 @@ const OrdersScreen = props => {
   )
 }
 
-OrdersScreen.navigationOptions = ({ navigation }) => {
+export const screenOptions = ({ navigation }) => {
   return {
     title: 'Your Orders',
     headerLeft: () => (

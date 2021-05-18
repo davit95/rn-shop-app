@@ -65,7 +65,7 @@ const CartScreen = props => {
   )
 }
 
-CartScreen.navigationOptions = ({ navigation }) => {
+export const screenOptions = navData  => {
   return {
     title: 'Your Cart'
   }

@@ -5,7 +5,7 @@ import Colors from "../../constants/Colors";
 import * as cartActions from '../../store/actions/cart';
 
 const ProductDetailScreen = props => {
-  const productId = props.navigation.getParam('productId');
+  const productId = props.route.params.productId;
   const products = useSelector(state => state.products.availableProducts);
   const selectedProduct = products.find(product => product.id === productId);
 
@@ -34,8 +34,8 @@ const ProductDetailScreen = props => {
   )
 }
 
-ProductDetailScreen.navigationOptions = ({ navigation }) => {
-  const productTitle = navigation.getParam('productTitle');
+export const screenOptions = (navData) => {
+  const productTitle = navData.route.params.productTitle;
   return {
     title: productTitle
   }
